@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js counter</title>
+    <link rel="stylesheet" href="./stylesjscounter/style.css"/>
+    
+</head>
+<body>
+    <div class="main-container">
+        <div class="box-1">
+            <h2 class="counter">COUNTER</h2>
+            <h1 id="number" class="seven"></h1>
+            <div class="button">
+               <button class="lower" type="button" onclick="numberDecrease()">LOWER COUNT</button>
+               <br><br>
+               <button class="add" type="button" onclick="numberIncrease()">ADD COUNT</button>
+
+            </div>
+
+        </div>
+
+    </div>
+    <script type="text/javascript">
+        let counter =0
+        let numberElement = document.getElementById("number")
+        console.log(numberElement)
+        //numberElement.innerHTML = "50"
+        numberElement.innerHTML=counter
+        function numberIncrease(){
+            if(counter<50){
+            counter=counter+1
+            console.log(counter)
+            numberElement.innerHTML=counter
+            }
+            
+        }
+        function numberDecrease(){
+            if(counter >0){
+
+                counter=counter-1
+                console.log(counter)
+                numberElement.innerHTML = counter
+            }
+        }
+    </script>
+</body>
+</html>
